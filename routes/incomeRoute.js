@@ -6,6 +6,8 @@ router.route('/').post(incomeController.add)
 router.route('/:user').get(incomeController.getAll)
 
 
-router.route('/:id').delete(incomeController.delete)
+router.route('/:id')
+    .delete(incomeController.delete)
+    .put(incomeController.update)
 
 module.exports = router
