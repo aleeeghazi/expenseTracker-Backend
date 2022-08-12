@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth")
 const incomeRoute = require("./routes/incomeRoute")
 const expenseRoute = require("./routes/expenseRoute")
 const categoryRoute = require("./routes/categoryRoute")
+const loanRoute = require("./routes/loanRoute")
 
 const morgan = require('morgan');
 
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(morgan('tiny'));
 
 app.use("/api/auth", authRoute);
+app.use("/api/loan", loanRoute);
 app.use("/api/income", incomeRoute);
 app.use("/api/expense", expenseRoute);
 app.use("/api/category", categoryRoute);

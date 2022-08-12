@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const expensesController = require('../controllers/expense');
-const thresholdController = require('../controllers/thresholdController');
 
 
 router.route('/')
